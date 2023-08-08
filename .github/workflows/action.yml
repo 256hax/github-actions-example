@@ -11,9 +11,9 @@ jobs:
       image: solanalabs/solana:stable
     steps:
       - name: apt-get
-        run:
+        run: |
           apt-get update
-          apt-get install procps # pkill
+          apt-get install procps
       - name: Solana version
         run: |
           cat /etc/os-release
