@@ -2,7 +2,7 @@ name: Node Container
 on:
   push:
     branches:
-      - docker2
+      - node
 
 jobs:
   node-docker:
@@ -12,6 +12,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 19
-          cache: 'npm'
+          cache: "npm"
       - run: npm ci
       - run: npm test
