@@ -10,6 +10,8 @@ jobs:
     container:
       image: solanalabs/solana:stable
     steps:
+      - name: apt-get
+        run: apt-get install procps # pkill
       - name: Solana version
         run: |
           cat /etc/os-release
