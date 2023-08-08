@@ -10,9 +10,10 @@ jobs:
     container:
       image: solanalabs/solana:stable
     steps:
-      - name: apt-get
-        run: |
-          apt-get update
+      - name: apt-get update
+        run: apt-get update
+      - name: apt-get install procps
+        run: apt-get install procps
       - name: Solana version
         run: |
           cat /etc/os-release
