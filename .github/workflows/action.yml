@@ -1,0 +1,17 @@
+name: Node Container
+on:
+  push:
+    branches:
+      - docker2
+
+jobs:
+  node-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
