@@ -5,7 +5,7 @@ on:
       - solana
 
 jobs:
-  node-docker:
+  solana-docker:
     runs-on: ubuntu-latest
     container:
       image: solanalabs/solana:stable
@@ -17,3 +17,6 @@ jobs:
       - name: Solana Test Validator
         run: |
           solana-test-validator
+      - name: Kill Solana Test Validator Process
+        run: |
+          pkill solana-test-validator
