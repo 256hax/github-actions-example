@@ -1,0 +1,16 @@
+name: Solana Container
+on:
+  push:
+    branches:
+      - solana
+
+jobs:
+  node-docker:
+    runs-on: ubuntu-latest
+    container:
+      image: solanalabs/solana:stable
+    steps:
+      - name: Solana version
+        run: |
+          cat /etc/os-release
+          solana --version
