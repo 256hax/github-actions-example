@@ -22,5 +22,7 @@ jobs:
         run: solana-test-validator &
       - name: ps -aux
         run: ps -aux
+      - name: killall -9 solana-test-validator
+        run: killall -9 solana-test-validator
       - name: Kill Solana Test Validator Process
         run: pkill solana-test-validator
