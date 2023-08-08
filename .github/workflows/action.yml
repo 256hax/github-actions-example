@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: apt-get update
         run: apt-get update
+      - name: apt-get install procps(kilall)
+        run: apt-get install -y procps
       - name: Solana version
         run: |
           cat /etc/os-release
