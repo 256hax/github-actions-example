@@ -12,15 +12,11 @@ jobs:
     steps:
       - name: apt-get update
         run: apt-get update
-      - name: apt-get install procps
-        run: apt-get install -y procps
       - name: Solana version
         run: |
           cat /etc/os-release
           solana --version
       - name: Solana Test Validator
         run: solana-test-validator &
-      - name: ps -aux
-        run: ps -aux
-      - name: killall -9 solana-test-validator
+      - name: kill solana-test-validator process
         run: killall -9 solana-test-validator
