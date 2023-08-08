@@ -14,3 +14,6 @@ jobs:
         run: |
           cat /etc/os-release
           solana --version
+      - name: Solana Test Validator
+        run: |
+          solana-test-validator
