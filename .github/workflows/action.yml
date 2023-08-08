@@ -13,7 +13,6 @@ jobs:
       - name: apt-get
         run: |
           apt-get update
-          apt-get install procps
       - name: Solana version
         run: |
           cat /etc/os-release
