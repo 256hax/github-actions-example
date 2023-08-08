@@ -16,7 +16,7 @@ jobs:
           solana --version
       - name: Solana Test Validator
         run: |
-          solana-test-validator
+          solana-test-validator &
       - name: Kill Solana Test Validator Process
         run: |
           pkill solana-test-validator
