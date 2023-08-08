@@ -19,8 +19,6 @@ jobs:
           cat /etc/os-release
           solana --version
       - name: Solana Test Validator
-        run: |
-          solana-test-validator &
+        run: solana-test-validator &
       - name: Kill Solana Test Validator Process
-        run: |
-          pkill solana-test-validator
+        run: pkill solana-test-validator
